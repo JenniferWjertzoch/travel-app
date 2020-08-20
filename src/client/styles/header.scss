@@ -1,0 +1,131 @@
+header {
+    background-color: rgba(255,255,255,0.4);
+    height: 100px;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+/* Menu */
+.menu {
+    clear: both;
+    max-height: 0;
+    overflow: hidden;
+    padding: 10px;
+    transition: max-height .3s;
+    z-index: 1;
+}
+
+.menu a {
+    display: block;
+    padding: 8px;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    background-color: #223;
+    color: #CF6;
+    transition: all .3s;
+}
+
+/* Menu icon */
+.menu-icon {
+    float: right;
+    margin: 10px;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+
+.menu-icon .nav-icon {
+    background: #333;
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 25px;
+}
+
+.menu-icon .nav-icon:before,
+.menu-icon .nav-icon:after {
+    background: #333;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.menu-icon .nav-icon:before {
+    top: 8px;
+}
+
+.menu-icon .nav-icon:after {
+    top: -8px;
+}
+
+/* Invisible menu checkbox */
+.menu-checkbox {
+    display: none;
+}
+
+.menu-checkbox:checked ~ .menu {
+    max-height: 270px;
+}
+
+.menu-checkbox:checked ~ .menu-icon .nav-icon {
+    background: transparent;
+}
+
+.menu-checkbox:checked ~ .menu-icon .nav-icon:before {
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+.menu-checkbox:checked ~ .menu-icon .nav-icon:after {
+    top: 0;
+    transform: rotate(45deg);
+}
+
+/* Menu signup button */
+.main-signupbtn {
+    margin: 20px 20px 20px 40px;
+}
+
+/* Navigation logo */
+.logo {
+    display: block;
+    float: left;
+    font-size: 2em;
+    text-decoration: none;
+}
+
+.logo img {
+    height: 60px;
+}
+
+@media screen and (min-width: 767px) {
+    header {
+        padding: 1rem 10%;
+    }
+
+    .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+        margin-top: 15px;
+    }
+
+    .menu a {
+        display: inline;
+    }
+
+    .menu-icon {
+        display: none;
+    }
+
+    .main-signupbtn {
+        float: right;
+    }
+}

@@ -1,0 +1,170 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body {
+    background: #EEE;
+    color: #223;
+    font: 400 18px/1.6 Fijalla One, sans-serif;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+    background: url('../media/img/alex-kulikov-sPQbAah2f98-unsplash.jpg') top/cover no-repeat;
+    color: #d6e0e6;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    padding-bottom: 48px;
+}
+
+h1 {
+    color: rgb(45,45,45);
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+.main-headline {
+    color: white;
+    font: 300 50px/0.4 Arial Black, Gadget, sans-serif;
+}
+
+.sub-headline {
+    color: white;
+    font: 300 60px 'Dancing Script', cursive;
+    text-align: center;
+
+}
+
+.city-view {
+    border-radius: 50%;
+    display: inline-block;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    width: 200px;
+}
+
+.data-form-section {
+    margin-top: 150px;
+}
+
+.invisible {
+    display: none;
+}
+
+section {
+    margin: 40px;
+}
+
+form {
+    margin-top: 20px;
+}
+
+textarea,
+label {
+    color: rgb(255,255,255);
+    display: block;
+    font: 400 24px/1.4em 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 10px 0;
+}
+
+input,
+select {
+    color: rgb(45,45,45);
+    font-size: 16px;
+}
+
+input,
+label,
+textarea {
+    width: 285px;
+}
+
+textarea,
+input,
+select {
+    border: 1px solid rgb(236,236,236);
+    padding: 10px;
+}
+
+select {
+    height: 50px;
+    width: 350px;
+}
+
+input,
+button {
+    display: block;
+    height: 45px;
+}
+
+label {
+    padding: 10px;
+}
+
+button {
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    height: 45px;
+    margin-top: 10px;
+    padding: 15px;
+    text-transform: uppercase;
+    transition: all .3s;
+    width: 285px;
+}
+
+button:hover {
+    background-color: #567a9b;
+}
+
+.button-type-two {
+    background-color: rgb(255,79,90);
+    border: none;
+    border-radius: 10px;
+    color: rgb(236,236,236);
+    cursor: pointer;
+    float: right;
+    transition: all .3s;
+    width: 140px;
+}
+
+.button-type-two:hover {
+    background-color: #c54560;
+}
+
+@media screen and (min-width: 767px) {
+    main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .data-form-section {
+        grid-column: 1/2;
+        justify-self: center;
+    }
+
+    .travel-data-section {
+        grid-column: 2/3;
+        justify-self: left;
+        margin-top: 140px;
+    }
+
+    .main-headline {
+        font-size: 65px;
+    }
+
+    textarea,
+    input,
+    label,
+    button {
+        width: 370px;
+    }
+}
