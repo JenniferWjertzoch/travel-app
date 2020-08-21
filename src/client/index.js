@@ -1,5 +1,5 @@
 import { performAction } from './js/formHandler'
-import { HandleTravelData } from "./js/app"
+import { HandleTravelData } from './js/app'
 
 import './styles/resets.scss'
 import './styles/base.scss'
